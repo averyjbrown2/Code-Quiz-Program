@@ -50,13 +50,12 @@ const myQuestions = [
     answer: "c"
 },
 {
-        question: "This is where the styles for a program are generally
-        stored:"
+        question: "This is where the styles for a program are generally stored:",
         answers: {
         a: "index.html",
         b: "style.code",
         c: "style.css",
-        d. "program.style",
+        d: "program.style",
         },
         answer: "c"
     }
