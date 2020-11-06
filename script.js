@@ -1,62 +1,96 @@
-const quizContainer = document.getElementById('quiz');
-const resultsContainer = document.getElementById('results');
-const submitButton = document.getElementById('submit');
+quizContainer = document.getElementById('quiz');
+resultsContainer = document.getElementById('results');
+submitBtn = document.getElementById('submit');
 
 function buildQuiz(){}
 function showResults(){}
 buildQuiz()
-submitButton.addEventListener('click', showResults);
+submitBtn.addEventListener('click', showResults);
 
-const myQuestions = [
+//
+var questions = [
     {
-        answers: {
+        choices: {
         question: "Commonly used data types DO NOT include:",
         a: "strings",
         b: "booleans",
         c: "alerts",
         d: "numbers"
     },
-      answer:  "b"
+      answerIndex:  "1" //b
 },
 {
         question: "Arrays in Javascript can be used to store:",
-        answers: {
+        choices: {
         a: "numbers and strings",
         b: "other Arrays",
         c: "booleans",
         d: "all of the above"
     },
-    answer: "d"
+    answerIndex: "3" //d
 },
 {
         question: "This tag is used to denote JavaScript in code:",
-        answers: {
+        choices: {
         a: "<JavaScript>",
         b: "<script>",
         c: "<Java>",
         d: "<js>"
     },
-    answer: "b"
+    answerIndex: "1" //b
 },
 {
 
         question: "This is an artificial and informal language that helps programmers develop algorithms:",
-        answers: {
+        choices: {
         a: "pre-code",
         b: "code-ish",
         c: "pseudocode",
         d: "lowcode"
     },
-    answer: "c"
+    answerIndex: "2" //c
 },
 {
         question: "This is where the styles for a program are generally stored:",
-        answers: {
+        choices: {
         a: "index.html",
         b: "style.code",
         c: "style.css",
         d: "program.style",
         },
-        answer: "c"
+        answerIndex: "2" //c
     }
 ]
+
+function buildQuiz() {
+    const output = [];
+
+    myQuestions.forEach(
+        (currentQuestion, questionNumber) => {
+
+        const answer
+        }
+    )
+}
+
+//functions from class
+
+var currentQuestionIndex = 0;
+
+
+function displayQuestion() {
+    var currentQuestion = questions[currentQuestionIndex];   
+    currentQuestioIndex.answerIndex
+
+}
+
+
+function answerChosen() {
+currentQuestionIndex++;
+displayQuestion();
+}
+
+
+choiceList.addEventListener("click", answerChosen);
+
+//call functions
