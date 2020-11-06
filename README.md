@@ -8,9 +8,10 @@ use pseudocode to help get plan together to write the code.
 
 var currentQuestionIndex = 0;
 
-
+if (current)
 function displayQuestion() {
-    var currentQuestion = questions[currentQuestionIndex];   currentQuestioIndex.answerIndex
+    var currentQuestion questionscurrentQuestionIndex];   
+    currentQuestionIndex.answerIndex
 
 }
 

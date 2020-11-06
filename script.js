@@ -2,7 +2,7 @@ quizContainer = document.getElementById('quiz');
 resultsContainer = document.getElementById('results');
 submitBtn = document.getElementById('submit');
 
-function buildQuiz(){}
+function createQuiz(){}
 function showResults(){}
 buildQuiz()
 submitBtn.addEventListener('click', showResults);
@@ -73,24 +73,31 @@ function buildQuiz() {
     )
 }
 
-//functions from class
+//functions attempted
 
+var currentQuestionIndex = 0;
+
+questionReveal
+if(var i=0; i<questions.length; i++){
+    currentQuestionIndex = document.write(questions(i))
+
+//Given equations
 var currentQuestionIndex = 0;
 
 
 function displayQuestion() {
-    var currentQuestion = questions[currentQuestionIndex];   
-    currentQuestioIndex.answerIndex
+    var currentQuestion = questions[currentQuestion[i]];   
+    currentQuestionIndex.answerIndex
 
+    }
 }
-
 
 function answerChosen() {
 currentQuestionIndex++;
 displayQuestion();
 }
 
-
+var choiceList = 
 choiceList.addEventListener("click", answerChosen);
 
 //call functions
