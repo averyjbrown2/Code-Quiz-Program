@@ -1,10 +1,13 @@
 quizContainer = document.getElementById('quiz');
 resultsContainer = document.getElementById('results');
-submitBtn = document.getElementById('submit');
+var submitBtn = document.getElementById('submit');
 
-function createQuiz(){}
+function startQuiz(){
+    //hide questions, starts clock, hide start screen, show div with current questions
+}
+startBtn.click = startQuiz
 function showResults(){}
-buildQuiz()
+
 submitBtn.addEventListener('click', showResults);
 
 //
@@ -75,20 +78,35 @@ function buildQuiz() {
 
 //functions attempted
 
-var currentQuestionIndex = 0;
 
-questionReveal
-if(var i=0; i<questions.length; i++){
-    currentQuestionIndex = document.write(questions(i))
+
+//showResults
+
+////var currentQuestionIndex = 0;
+
+
+
+//function questionReveal(){
+//for (i=0; i<questions.length; i++){
+  //  currentQuestionIndex = document.write(questions[i])
+//}
+
+
 
 //Given equations
 var currentQuestionIndex = 0;
 
 
 function displayQuestion() {
-    var currentQuestion = questions[currentQuestion[i]];   
-    currentQuestionIndex.answerIndex
+    var currentQuestion = questions[currentQuestionIndex[i]];   
+    //currentQuestionIndex.answerIndex
+    var visibleQuestions = document.getElementById("questions");
+    visibleQuestions.textContent=currentQuestion.questions;
 
+    var visibleAnswers = document.getElementsById("answers");
+    visibleAnswers.innerHTML = "";
+    //loop over each question for buttons
+    //append to page
     }
 }
 
