@@ -5,63 +5,55 @@ var answerElems = {
 	c: document.getElementById("answerC"),
 	d: document.getElementById("answerD")
 };
-var checkElem = document.getElementById("check");
+
 var submitBtn = document.getElementById('submit');
 var timer = document.getElementById("timer");
 
 var currentQ = 0;
 
+//clears page once startBtn is clicked
 startBtn.addEventListener("click", function() {
 	startPage.style.display = "none";
 	startQuiz();
-});
+})
 
-// for (let i in answerElems) {
-// 	answerElems[i].addEventListener("click", function() {
-//         submitAnswer(i);
-//     });
-// }
+//don't forget to set up the timer and make it reset for each question
 
-// function submitAnswer(ans) { 
-    
-// 	let q = questions[currentQ];
-// 	let letters = ["a", "b", "c", "d"];
+function startQuiz() {
+	askQuestion();
+}
 
-// 	checkElem.innerText = "question " + (currentQ+1) + " was";
-// 	if (ans == letters[q.answerIndex]){
-// 		checkElem.innerText += ' correct';
-// 	} else {
-// 		checkElem.innerText += ' wrong';
-// 	}
+function askQuestion() {
+	// get current question
+	let q = questions[currentQ];
 
-//     currentQ++;
-//     askQuestion();
-// }
+	////////////////////////////////////
+	var showPage= [];
+	var results;
+		for(var i=0; i<questions.length; i++) {
+			results= [];
+			for(letter in questions[i].results){
+				results.push()
+			}
+		}
+}
 
-// //don't forget to set up the timer and make it reset for each question
+	///////////////////////////////////////
 
-// function startQuiz() {
-// 	askQuestion();
-// }
+	// set question elem text
+	questionElem.innerText =
+		(currentQ + 1) + '. ' + q.choices.question;
 
-// function askQuestion() {
-// 	// get current question
-// 	let q = questions[currentQ];
-// 	console.log(q);
-// 	// set question elem text
-// 	questionElem.innerText =
-// 		(currentQ + 1) + '. ' + q.question;
-
-// 	// loop through keys of answerElems
-// 	for (let i in answerElems) {
-// 		answerElems[i].innerText =
-// 			'(' + i + ') ' + q.choices[i];
-// 	}
-// }
+	// loop through keys of answerElems
+	for (let i in answerElems) {
+		answerElems[i].innerText =
+			'(' + i + ') ' + q.choices[i];
+	}
+}
 
 var questions = [{
-	question: "Commonly used data types DO NOT include:",
 	choices: {
+		question: "Commonly used data types DO NOT include:",
 		a: "strings",
 		b: "booleans",
 		c: "alerts",
@@ -105,4 +97,3 @@ var questions = [{
 	},
 	answerIndex: "2" //c
 }];
-

@@ -9,40 +9,16 @@ var hiddenQuestions = "";
 var visibleQuestions;
 
 
-startBtn.addEventListener("click", function(event) {
+startBtn.addEventListener("click", function(event){
     startQuiz();
-    }
-
+    questionReveal();
+    })
     
 function startQuiz() {
     //hide questions, starts clock, hide start screen, show div with current questions
     //document.getElementById("questions").style.visibility = "hidden";
-    document.getElementById("startPage").style.visibility = "hidden";
+    startBtn.style.visibility = "hidden";
    
-    function setTime() {
-      var timerInterval = setInterval(function() {
-        secondsLeft--;
-        timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
-    
-        if(secondsLeft === 0) {
-          clearInterval(timerInterval);
-          sendMessage();
-        }
-    
-      }, 1000);
-    }
-    
-    function sendMessage() {
-      timeEl.textContent = " ";
-    
-      var imgEl = document.createElement("img");
-    
-      imgEl.setAttribute("src", "images/image_1.jpg");
-      mainEl.appendChild(imgEl);
-    
-    }
-    
-    setTime();
 
 
 }
@@ -129,12 +105,19 @@ var questions = [
 
 
 function questionReveal() {
-    i = 0; i < questions.length; i++) {
-        currentQuestionIndex = document.write(questions[i]);
-    }
-        //document.getElementById("questions").style.visibility = "hidden";
-   // }
+    (i = 0; i < questions.length; i++) {
+        var currentQuestionIndex = questions.children[0].innertext;
+        var answerChoices = questions.children[1].innertext;
+        var correctAnswers = questions.children[2].innertext;
+        var currentQuestion = questions[currentQuestionIndex[i].innertext]; 
+        var currentAnswerChoices = questions[answerChoices[i].innertext];
+        var currentCorrectAnswers = questions[correctAnswers[i].innertext];
 
+    } 
+
+
+        
+    currentQuestion = document.write(currentQuestionIndex[i]);
 
 
     //Given equations
@@ -142,14 +125,10 @@ function questionReveal() {
 
 
     //function displayQuestion() {
-        //var currentQuestion = questions[currentQuestionIndex[i]];   
-        //if (i)
+        //var currentQuestion = questions[currentQuestionIndex[i]];  
+            //i++;
         //currentQuestionIndex.answerIndex
-        //var visibleQuestions = document.getElementById("questions");
-        //visibleQuestions.textContent=currentQuestion.questions;
 
-        //var visibleAnswers = document.getElementsById("answers");
-        //visibleAnswers.innerHTML = "";
         //loop over each question for buttons
         //append to page
     //}
