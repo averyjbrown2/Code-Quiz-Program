@@ -1,3 +1,5 @@
+//js file that holds questions as objects in an array that will be looped through on the main page. 
+
 var questions = [{
 	question: "Commonly used data types DO NOT include:",
 	choices: [
@@ -5,7 +7,7 @@ var questions = [{
 		"booleans",
 		"alerts",
 		"numbers"
-], //////make answers buttons
+],
 	answerIndex: "booleans" //b
 }, {
 	question: "Arrays in Javascript can be used to store:",

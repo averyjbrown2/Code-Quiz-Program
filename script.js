@@ -1,3 +1,4 @@
+//sets initial variables and grabs elements to be utilized later
 var startBtn = document.getElementById('startBtn');
 var timeLeft = 60;
 var currentIndex = 0;
@@ -6,9 +7,7 @@ var q = document.getElementById("questions");
 var setTimer;
 
 // Render start page
-// Click listener for start button
-// which will startQuiz()
-// which will startTimer()
+// Click listener for start button which will startQuiz() and startTimer()
 startBtn.addEventListener("click", function () {
 	startQuiz();
 	startTimer();
@@ -33,14 +32,19 @@ function startTimer() {
 	}, 1000);
 };
 function handleSubmit(event) {
+	//prevents page from reloading
 	event.preventDefault();
-	console.log("submitted");
+	//grabs element with initials id from html page and assigns value to initials variable
 	var initials = document.getElementById("initials").value;
-	console.log(initials);
+	//grabs user initials from local storage, parses, and saves to variable as array
 	var initialsArray = JSON.parse(localStorage.getItem("initials")) || [];
+	//saves user initials and score as object in variable
 	var user = {initials: initials, score: timeLeft};
+	//pushes user info into array
 	initialsArray.push(user);
+	//saves initials values as string to local storage
 	localStorage.setItem("initials", JSON.stringify(initialsArray));
+	//changes page to higghscore html
 	location.replace("./highscore.html")
 }
 // This function renders the final learderboard page
@@ -49,7 +53,9 @@ function leaderboard() {
 
 	// clear timerInterval
 	clearInterval(setTimer);
+	//fills text content of q
 	q.textContent = "Please enter your initials";
+	//add
 	document.getElementById("quiz").classList.add("d-none");
 	var form = document.getElementById("initialsForm");
 	form.classList.remove("d-none");
@@ -98,71 +104,3 @@ function getQuestions() {
 		choiceBtn.onclick = getGrades;
 	})
 };
-
-///q.setAttribute()
-// Listen for user response (choice)
-// Grade the choice
-// If wrong, decrement timer 10
-// Render next question
-// If questions are done, then render leaderboard() 
-
-
-
-
-
-
-///////////////////////////////////////////////////////////////
-///////timer//////////////// must reset after each question
-
-
-// function startTimer() {
-// 	
-
-
-// //clears page once startBtn is clicked
-// startBtn.addEventListener("click", function() {
-// 	//startPage.style.display = "none";
-// 	startQuiz();
-// 	startTimer();
-// });
-
-
-// function startQuiz() {
-// 	askQuestion();
-// };
-// startQuiz();
-
-// function askQuestion() {
-// 	// get current question
-// 	//let q = questions[currentQ];
-
-// 	//////////first attempt////////////////////////////////
-// // 	var showPage= [];
-// // 	var results;
-// // 		for(var i=0; i<questions.length; i++) {
-// // 			results= [];
-// // 			for(letter in questions[i].results){
-// // 				results.push()
-// // 			}
-// // 		}
-// // }
-// 	////////2nd attempt///////////////////////////
-// 	//var questionOptions = $("#questions");
-// 	questions.forEach(function(value){
-// 		document.write(value);
-// 		console.log(value); 
-// });
-// }
-// askQuestion();
-// 	///////////////////////////////////////
-
-// 	// set question elem text
-// // 	questionElem.innerText =
-// // 		(currentQ + 1) + '. ' + q.choices.question;
-
-// // 	// loop through keys of answerElems
-// // 	for (let i in answerElems) {
-// // 		answerElems[i].innerText =
-// // 			'(' + i + ') ' + q.choices[i];
-// // 	}
-// // }
