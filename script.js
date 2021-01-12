@@ -55,34 +55,43 @@ function leaderboard() {
 	clearInterval(setTimer);
 	//fills text content of q
 	q.textContent = "Please enter your initials";
-	//add
+	//adds class to quiz which hides it
 	document.getElementById("quiz").classList.add("d-none");
+	//grabs initialsForm and assigns to variable
 	var form = document.getElementById("initialsForm");
+	//removes class that hides form
 	form.classList.remove("d-none");
+	//displays form as block element
 	form.classList.add("d-block");
+	//grabs element with initialsForm id and assigns to variable
 	var intialsForm = document.getElementById("initialsForm");
+	//adds event listener to submit and assigns handlesubmit function
 	intialsForm.addEventListener("submit", handleSubmit);
 	// render leaderboard to page
 }
 
 // Quiz Game logic
-// Render first question to page
 function startQuiz() {
+	//hides welcome page and starts getQuestions function
 	startPage.style.display = "none";
 	getQuestions();
 }
 function getGrades(event) {
 //if answer is wrong, console.log "wrong answer" and subtract 10 seconds from timer
 	var answer = parseInt(event.target.id);
+	//if current question answer does not match provided answerIndex for corresponding question, 
+	//console.log "wrong answer" and subtract 10 seconds from timer
 	if (questions[currentIndex].choices[answer] !== questions[currentIndex].answerIndex){
 		console.log("Wrong answer");
 		timeLeft -= 10;
-	}		//if answer is right, move 
+	}		// 
 	console.log(event.target.id);
+	//advance questions until user reaches end of game
 	currentIndex ++;
 		if (questions.length > currentIndex) {
 			getQuestions();
 		} else {
+			//call leaderboard function once user completes last question
 			leaderboard();
 		}
 	}
@@ -90,17 +99,25 @@ function getGrades(event) {
 function getQuestions() {
 	var currentQ = questions[currentIndex];
 	console.log(currentQ.question);
+	//grabs quiz element and assigns to variable
 	var quizContainer = document.getElementById("quiz");
+	//assigns empty text content to quizContainer
 	quizContainer.innerHTML = "";
-	
+	//fills questions element with the current question pulled from questions array
 	q.textContent = currentQ.question;
+	//loops through currentQ choices to display 
 	currentQ.choices.forEach(function (choice, i) {
+		//for each choice option, a button is created with a value and styling class
 		var choiceBtn = document.createElement("button");
 		choiceBtn.setAttribute("value", choice);
 		choiceBtn.classList.add("m-3");
+		//sets text content of choices
 		choiceBtn.textContent = i + 1 + ". " + currentQ.choices[i];
+		//appends choices to quizContainer
 		quizContainer.appendChild(choiceBtn);
+		//assigns ids to choices
 		choiceBtn.setAttribute("id", i++);
+		//adds onclick which will run getGrades function when clicked
 		choiceBtn.onclick = getGrades;
 	})
 };
