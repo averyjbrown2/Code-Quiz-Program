@@ -47,7 +47,7 @@ averybgcoding@gmail.com
 
 
 ### Images  
-![Rendered Pages](./Assets/image1.png)    
-![Rendered Pages](./Assets/image2.png)  
-![Rendered Pages](./Assets/image3.png)  
-![Rendered Pages](./Assets/image4.png)  
+![Rendered Pages](./assets/image1.png)    
+![Rendered Pages](./assets/image2.png)  
+![Rendered Pages](./assets/image3.png)  
+![Rendered Pages](./assets/image4.png)  
