@@ -1,25 +1,53 @@
-# Code-Quiz-Program
-after user answers question, use loop 
-question index++
-no for loop to move you through questions. it would be too fast.
-one js file for each page, use 2 htmls. use bootstrap for page setup in htmls.
-Make sure quiz gets you to the end which shows you your points, before you start working on high scoreboard.
-use pseudocode to help get plan together to write the code.
 
-var currentQuestionIndex = 0;
-
-if (current)
-function displayQuestion() {
-    var currentQuestion questionscurrentQuestionIndex];   
-    currentQuestionIndex.answerIndex
-
-}
+ ![License](https://img.shields.io/badge/license-MIT-red)
 
 
-function answerChosen() {
-currentQuestionIndex++;
-displayQuestion();
-}
+# code-quiz-program  
 
 
-choiceList.addEventListener("click", answerChosen);
+### Description  
+This application presents as a timed code quiz. It opens to a welcome page that details the parameters, that ten seconds will be deducted for every incorrect answer chosen. The user can then select the start button, beginning the quiz, which lasts 60 seconds. After completing the final question, or once the timer runs out, the user is taken to a screen which allows them to input their initials. After entering their information, the user is directed to the high scores page, which lists the initials and times for recent users. This application demonstrates several concepts: saving to and accessing local storage, dynamically creating elements, and manipulating timers, for example. 
+
+
+### Table of Contents  
+[Description](#description)  
+[Installation](#installation)  
+[Usage](#usage)  
+[Contributing](#contributing)  
+[Tests](#tests)  
+[License](#license)  
+[Questions](#questions)  
+
+
+### Installation  
+N/A
+
+
+### Usage  
+N/A  
+
+
+### Contributing  
+Contributions provided by: Maxwell Allee, UNCC Full Stack Coding Bootcamp activities
+
+
+### Tests  
+N/A
+
+
+### License  
+This application is covered under the MIT license
+
+
+### Questions  
+For further questions, please contact me at:
+averybgcoding@gmail.com  
+[Github link](https://unchar.bootcampcontent.com/averyjbrown2/)  
+
+
+
+### Images  
+![Rendered Pages](./Assets/image1.png)  
+![Rendered Pages](./Assets/image2.png)  
+![Rendered Pages](./Assets/image3.png)  
+![Rendered Pages](./Assets/image4.png)  

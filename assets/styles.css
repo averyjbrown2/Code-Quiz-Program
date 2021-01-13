@@ -16,10 +16,12 @@ body {
 #startBtn, 
 #timer, 
 #questions,
-button {
+button,
+#inputBtn {
     font-size: 30px;
 }
-button {
+button,
+#inputBtn {
     background-color: #0275d8;
     color: white;
 }
