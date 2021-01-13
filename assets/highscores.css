@@ -1,9 +1,8 @@
 body {
     font-family: 'Indie Flower', cursive;
-    background-color: #;
 }
 .table {
-    background-color: #1d263b;
+    background-color: #0275d8 /* #1d263b */;
     color: white;
     font-size: 40px;
 }
@@ -12,14 +11,4 @@ body {
     color: white; 
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAxxiNOCeetKn4W_1_M5FsGXgRCjIGoSqVjQ&usqp=CAU");
     width: 100%;
-}
-#startBtn, 
-#timer, 
-#questions,
-button {
-    font-size: 30px;
-}
-button {
-    background-color: #0275d8;
-    color: white;
 }

@@ -49,8 +49,6 @@ function handleSubmit(event) {
 }
 // This function renders the final learderboard page
 function leaderboard() {
-	// capture timeLeft to score
-
 	// clear timerInterval
 	clearInterval(setTimer);
 	//fills text content of q
