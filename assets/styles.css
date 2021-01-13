@@ -1,0 +1,12 @@
+body {
+    background-color: #a0eade;
+    font-family: 'Indie Flower', cursive;
+}
+.table {
+    background-color: #1d263b;
+    color: white;
+    font-size: 40px;
+}
+.header.m-3 {
+    font-size: 100px;
+}
